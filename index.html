@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Reminder - Pengingatkan Tugas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📋 Task Reminder</h1>
+            <p>Kelola tugas-tugasmu dengan mudah</p>
+        </header>
+
+        <main>
+            <!-- Section untuk Input Task -->
+            <section class="input-section">
+                <div class="form-group">
+                    <input 
+                        type="text" 
+                        id="taskInput" 
+                        class="task-input" 
+                        placeholder="Masukkan tugas baru..."
+                        autocomplete="off"
+                    >
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="categorySelect">Kategori:</label>
+                        <select id="categorySelect" class="form-select">
+                            <option value="work">💼 Pekerjaan</option>
+                            <option value="personal">👤 Personal</option>
+                            <option value="school">🎓 Sekolah</option>
+                            <option value="health">❤️ Kesehatan</option>
+                            <option value="other">📌 Lainnya</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="prioritySelect">Prioritas:</label>
+                        <select id="prioritySelect" class="form-select">
+                            <option value="low">🟢 Rendah</option>
+                            <option value="medium">🟡 Sedang</option>
+                            <option value="high">🔴 Tinggi</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <button id="addBtn" class="btn btn-add">+ Tambah Tugas</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Filter & Search -->
+            <section class="filter-section">
+                <div class="search-box">
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        class="search-input" 
+                        placeholder="Cari tugas..."
+                    >
+                </div>
+
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Semua</button>
+                    <button class="filter-btn" data-filter="pending">Menunggu</button>
+                    <button class="filter-btn" data-filter="completed">Selesai</button>
+                    <button class="filter-btn" data-filter="high">Prioritas Tinggi</button>
+                </div>
+            </section>
+
+            <!-- Section Daftar Task -->
+            <section class="tasks-section">
+                <h2 id="taskTitle">Semua Tugas</h2>
+                <div id="taskList" class="task-list">
+                    <!-- Tasks akan ditampilkan di sini -->
+                </div>
+                <div id="emptyState" class="empty-state">
+                    <p>📭 Tidak ada tugas. Mulai dengan menambahkan tugas baru!</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Task Reminder. Tetap produktif! 🚀</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
